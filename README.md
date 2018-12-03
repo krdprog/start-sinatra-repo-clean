@@ -8,16 +8,44 @@ Start Sinatra (Ruby) repo clean for application with ActiveRecord.
 bundle install
 ```
 
-2. Migrate:
+2. Make in app.rb Class (example):
+
+```ruby
+class Client < ActiveRecord::Base
+end
+```
+
+3. Make migration (example):
+
+```bash
+rake db:create_migration NAME=create_clients
+```
+
+4. Edit migration (example):
+
+```ruby
+class CreateClients < ActiveRecord::Migration[5.2]
+  def change
+    create_table :clients do |t|
+        t.text :name
+        t.text :phone
+        t.text :datestamp
+        t.timestamps
+    end
+  end
+end
+```
+
+5. Migrate:
 
 ```bash
 rake db:migrate
 ```
 
-3. Run Sinatra application:
+6. Run Sinatra application:
 
 ```bash
 ruby app.rb
 ```
 
-4. Open in your browser: http://localhost:4567/
+7. Open in your browser: http://localhost:4567/
