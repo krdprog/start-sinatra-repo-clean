@@ -5,9 +5,9 @@ require 'sinatra/activerecord'
 set :database, "sqlite3:database.db"
 
 # class Client < ActiveRecord::Base
-# 	validates :name, presence: true, length: { minimum: 3 }
+#   validates :name, presence: true, length: { minimum: 3 }
 # end
 
 get '/' do
-	erb :index
+  erb :index
 end
