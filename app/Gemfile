@@ -7,5 +7,5 @@ gem "sqlite3"
 gem "sinatra-activerecord"
 
 group :development do
-	gem "tux"
+  gem "tux"
 end
